@@ -1,5 +1,4 @@
 import marked from "marked";
-import React from "react";
 
 const root_el = document.getElementById("root");
 const input_el = document.getElementById("input");
