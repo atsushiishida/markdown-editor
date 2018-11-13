@@ -1,0 +1,72 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px; */
+}
+
+body {
+  font-family: -apple-system-body, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese",
+    "游ゴシック  Medium", "Yu Gothic Medium", "メイリオ", meiryo, sans-serif;
+}
+
+h3 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h1 {
+  font-size: 3rem;
+}
+textarea {
+  margin: 0px 0px;
+  box-sizing: border-box;
+  resize: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 0px;
+}
+
+.header {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background-color: #56a764;
+}
+
+.main {
+}
+
+#input-area {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  border-right: solid 1px gray;
+  height: calc(100vh - 80px);
+}
+#display-area {
+  box-sizing: border-box;
+  height: calc(100vh - 80px);
+  overflow: scroll;
+  float: left;
+  width: 50%;
+  padding: 0px 10px;
+}
+
+.footer {
+  box-sizing: border-box;
+  height: 30px;
+  clear: both;
+  border-top: solid 1px gray;
+}
+
+.page-title {
+  color: white;
+  padding: 10px 20px;
+}
+
+.copy-right {
+  margin-top: 10px;
+  text-align: center;
+}

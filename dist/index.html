@@ -3,46 +3,28 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <title>Markdown Editor</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css">
-  <style media="screen">
-    #body {
-      width: 100%;
-      padding 20px;
-      background-color: red;
-    }
-
-    #input-area {
-      width: 50%;
-      float: left;
-    }
-
-    #display-area {
-      width: 50%;
-      float: right;
-    }
-
-    textarea {
-      width: 100%;
-      box-sizing: border-box;
-      border: solid 1px;
-      border-radius: 2px;
-      outline: none;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="body">
+  <header class="header">
+    <h2 class='page-title'>Markdown Editor</h2>
+  </header>
+
+  <main class="main">
     <div id="input-area">
       <textarea id='input' placeholder="input here"></textarea>
     </div>
     <div id="display-area">
       <span id="root" class='markdown-body'></span>
     </div>
-  </div>
-
+  </main>
+  <footer class="footer">
+    <p class="copy-right">copyright ©︎2018 ISHIDA</p>
+  </footer>
   <script src='./main.js'>
   </script>
 </body>
