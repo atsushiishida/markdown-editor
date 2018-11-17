@@ -11,7 +11,7 @@ const DB_NAME = "markdown_db";
 const DB_VERSION = 1;
 
 input_el.addEventListener("keyup", () => {
-  let input_text = sanitize(input_el.value);
+  let input_text = input_el.value;
   let html_formatted = marked(input_text);
   ReactDOM.render(<MDPreview text_html={html_formatted} />, root_el);
 });
@@ -22,7 +22,7 @@ save_el.addEventListener("click", () => {
 });
 
 load_el.addEventListener("click", () => {
-  let data = load_idb(DB_NAME, DB_VERSION, 1);
+  load_idb(DB_NAME, DB_VERSION, 1);
 });
 
 class MDPreview extends React.Component {
@@ -36,10 +36,6 @@ class MDPreview extends React.Component {
     );
   }
 }
-
-const sanitize = html => {
-  return html.replace(/</g, "$lt;");
-};
 
 const save_idb = (db_name, db_version, data) => {
   let indexDBReq = indexedDB.open(db_name, db_version);
@@ -82,6 +78,11 @@ const load_idb = (db_name, db_version, key) => {
       let data = request.result;
       console.log("out in func:" + data.text);
       input_el.value = data.text;
+      let input_text = input_el.value;
+      let html_formatted = marked(input_text);
+      ReactDOM.render(<MDPreview text_html={html_formatted} />, root_el);
     };
   };
 };
+
+load_idb(DB_NAME, DB_VERSION, 1);

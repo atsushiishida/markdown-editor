@@ -19,6 +19,7 @@ h1 {
   font-size: 3rem;
 }
 textarea {
+  font-size: 1.8rem;
   margin: 0px 0px;
   box-sizing: border-box;
   resize: none;
@@ -30,9 +31,32 @@ textarea {
 
 .header {
   box-sizing: border-box;
-  height: 50px;
+  height: 70px;
   width: 100%;
   background-color: #56a764;
+}
+
+.menu {
+  padding-left: 20px;
+}
+
+.menu > li {
+  margin-left: 5px;
+  padding: 2px 5px;
+}
+
+.icon {
+  color: white;
+  font-size: 1.6rem;
+  background-color: inherit;
+  border-radius: 2px;
+  border: solid 1px white;
+}
+.icon:hover {
+  cursor: pointer;
+}
+.icon:active {
+  color: gray;
 }
 
 .main {
@@ -43,11 +67,11 @@ textarea {
   float: left;
   width: 50%;
   border-right: solid 1px gray;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
 }
 #display-area {
   box-sizing: border-box;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   overflow: scroll;
   float: left;
   width: 50%;
